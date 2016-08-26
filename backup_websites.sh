@@ -27,7 +27,7 @@ do
 	then
 		TODELETE=`head -n 1 $LOGFILE`
 		echo "Deleting $TODELETE" >> $LOG
-		rm $TODELETE
+		rm $DESTDIR/$TODELETE
 		tail -n +2 "$LOGFILE" > "$LOGFILE.tmp" && mv "$LOGFILE.tmp" "$LOGFILE"
 	fi
 done
